@@ -1,0 +1,34 @@
+{
+  "name": "genoa-calcio-news",
+  "version": "1.0.0",
+  "description": "App web per seguire le notizie del Genoa Calcio in tempo reale",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "scrape": "node scraper.js"
+  },
+  "keywords": [
+    "genoa",
+    "calcio",
+    "notizie",
+    "sport",
+    "scraper"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "axios": "^1.4.0",
+    "cheerio": "^1.0.0-rc.12",
+    "sqlite3": "^5.1.6",
+    "node-cron": "^3.0.2",
+    "rss-parser": "^3.13.0",
+    "dotenv": "^16.0.3"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

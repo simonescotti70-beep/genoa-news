@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: genoa-news
+    ports:
+      - "5000:5000"
+    environment:
+      - NODE_ENV=production
+      - PORT=5000
+    volumes:
+      - ./genoa.db:/app/genoa.db
+    restart: unless-stopped
+    networks:
+      - genoa-network
+
+networks:
+  genoa-network:
+    driver: bridge
+
+# Run with: docker-compose up -d
+# View logs: docker-compose logs -f
+# Stop: docker-compose down
