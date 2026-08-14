@@ -10,7 +10,7 @@ RUN npm ci --only=production
 
 # Copy app files
 COPY server.js .
-# COPY public ./public    modifica consigliata da RAYLAWAY
+COPY public ./public
 
 # Expose port
 EXPOSE 5000
